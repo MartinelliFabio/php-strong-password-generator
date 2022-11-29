@@ -1,26 +1,9 @@
 <?php
     include __DIR__ .'./partials/header.php';
+    include __DIR__ .'./functions/functions.php';
     $lunghezza_password = $_GET['password'] ?? '';
     
-    function passwordRandom($lunghezza_password) {
-
-        $array_lettere = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-        $array_numeri = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-        $array_simboli = ['!', '"', '£', '$', '%', '&', '/', '(', ')', '=', '?', '^', '*', '[', ']'];
-        
-        $array_totale = array_merge($array_lettere, $array_numeri, $array_simboli);
-        
-        $lunghezza_lettere = count($array_lettere) - 1;
-        $lunghezza_numeri = count($array_numeri) - 1;
-        $lunghezza_simboli = count($array_simboli) - 1;
-        $lunghezza_tot = count($array_totale) - 1;
-        
-        for($i= 0; $i < $lunghezza_password; $i++) {
-            $n = rand(0, $lunghezza_tot);
-            $pass[] = $array_totale[$n]; 
-        }
-        return implode($pass);
-    }
+    passwordRandom($lunghezza_password);
 
     if($lunghezza_password === '') {
         $pass_generata = 'Devi inserire una lunghezza per la password!';
@@ -33,10 +16,6 @@
 ?>
 
 
-
-
-
-
 <div class="container">
     <form action="index.php" method="GET">
       <div class="mb-3 d-flex">
@@ -44,7 +23,7 @@
             <p>Lunghezza Password:</p>
         </div>
         <div>
-            <input type="text" class="form-control" name="password">
+            <input type="number" class="form-control" name="password">
         </div>
       </div>
       <div class="mb-3 d-flex">
