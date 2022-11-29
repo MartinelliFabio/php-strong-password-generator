@@ -1,0 +1,47 @@
+nav {
+    height: 70px;
+    background-color: #001632;
+    color: white;
+}
+
+main {
+    height: calc(100vh - 180px);
+}
+
+#pass-generata {
+    height: calc(100vh - 140px);
+}
+
+.wrapper {
+    width: 1200px;
+    height: 650px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    color: white;
+    background-color: #001632;
+    border-radius: 20px;
+}
+
+h1 {
+    color: #7f8a98;
+}
+
+.form-container {
+    background-color: white;
+    color: black;
+    width: 50%;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.input-container {
+    margin-left: 200px;
+}
+
+.check-container {
+    margin-left: 60px;
+}

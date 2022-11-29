@@ -3,8 +3,10 @@
     include __DIR__ .'./partials/header.php'; 
 ?>
 
-    <div>
-        <h3>La tua password è: <?php echo $_SESSION['password']; ?></h3>
+    <div id="pass-generata">
+        <div>
+            <h3>La tua password è: <?php echo $_SESSION['password']; ?></h3>
+        </div>
     </div>
 
 <?php
