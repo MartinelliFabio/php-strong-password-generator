@@ -9,13 +9,22 @@ main {
 }
 
 #pass-generata {
-    height: calc(100vh - 140px);
+    height: calc(100vh - 180px);
+}
+
+.my-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+h3 {
+    padding: 150px;
+    padding-bottom: 0;
 }
 
 .wrapper {
-    width: 1200px;
+    width: 100%;
     height: 650px;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;

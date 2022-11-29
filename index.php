@@ -2,7 +2,7 @@
     session_start();
     include __DIR__ .'./partials/header.php';
     include __DIR__ .'./functions/functions.php';
-    $lunghezza_password = $_GET['password'] ?? '';
+    $lunghezza_password = $_POST['password'] ?? '';
     
     passwordRandom($lunghezza_password);
 
@@ -22,7 +22,7 @@
                 <h5>Genera una password sicura</h5>
             </div>
             <div class="form-container">
-                <form action="index.php" method="GET">
+                <form action="index.php" method="POST">
                   <div class="mb-3 d-flex">
                     <div>
                         <p>Lunghezza Password:</p>
