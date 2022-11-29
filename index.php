@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include __DIR__ .'./partials/header.php';
     include __DIR__ .'./functions/functions.php';
     $lunghezza_password = $_GET['password'] ?? '';
@@ -9,8 +10,9 @@
         $pass_generata = 'Devi inserire una lunghezza per la password!';
     } else {
         $pass_generata = passwordRandom($lunghezza_password);
+        $_SESSION['password'] = $pass_generata;
+        header('Location: ./passGenerata.php');
     }
-   
 
     
 ?>
@@ -66,9 +68,6 @@
       <button type="submit" class="btn btn-primary">Invia</button>
       <button type="reset" class="btn btn-secondary">Annulla</button>
     </form>
-    <div>
-        <h3>La tua password è: <?php echo $pass_generata; ?></h3>
-    </div>
 </div>
 
 
